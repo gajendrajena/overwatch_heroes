@@ -33,7 +33,7 @@ class App extends React.Component {
       .then(_this.parseJson)
       .then(function(data) {
         console.log(data.length)
-        _this.setState({heroes: data});
+        _this.setState({heroes: data['heros']});
       }).catch(function(error) {
         console.log('Request failed', error);
       });

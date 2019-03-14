@@ -6,11 +6,13 @@ module Api
       # GET /api/heros
       # GET /api/heros.json
       def index
+        paginate_params = {page: params[:page]}
         if params[:name]
-          @heros = Hero.where("LOWER(name) like ?", "%#{params[:name].downcase}%")
+          @heros = Hero.where("LOWER(name) like ?", "%#{params[:name].downcase}%").paginate(paginate_params)
         else
-        @heros = Hero.all
+          @heros = Hero.paginate(paginate_params)
         end
+        @heros
       end
 
       # GET /api/heros/1
