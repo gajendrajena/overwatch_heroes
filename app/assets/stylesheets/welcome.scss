@@ -4,3 +4,72 @@
   padding: 4rem 1.5rem;
   text-align: center;
 }
+.img-thumbnail {
+  background-color: transparent;
+  border: .2em solid #dee2e6;
+  border-radius: 17em;
+}
+
+.starter-template {
+  .card {
+    min-height: 598px;
+    overflow: auto
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1240px) {
+  .img-thumbnail {
+    border-radius: 20em;
+    width: 12em;
+  }
+  .starter-template {
+    .card {
+      min-height: 498px;
+      overflow: auto
+    }
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 960px) {
+  .img-thumbnail {
+    border-radius: 16em;
+    width: 10em;
+  }
+  .starter-template {
+    .card {
+      min-height: 360px;
+      overflow: auto
+    }
+  }
+}
+
+@media only screen and (min-width: 412px) and (max-width: 650px) {
+  .img-thumbnail {
+    border-radius: 7em;
+    width: 6em;
+    padding: 0;
+  }
+  .starter-template {
+    .card {
+      min-height: 14rem;
+      overflow: auto
+    }
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  .img-thumbnail {
+    border: .1em solid #dee2e6;
+    border-radius: 3em;
+    width: 4em;
+    padding: 0.1rem;
+  }
+  .starter-template {
+    .card {
+      min-height: 8rem;
+      overflow: auto
+    }
+  }
+}
+
+

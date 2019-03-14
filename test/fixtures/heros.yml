@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Doomfist
+  slug: doomfist
+  image_portrait: https://oversumo-stage.s3-eu-west-1.amazonaws.com/uploads/hero/image_portrait/doomfist/portrait.png
+  image_splash: https://oversumo-stage.s3-eu-west-1.amazonaws.com/uploads/hero/image_splash/doomfist/splash.jpg
+  image_card_background: https://oversumo-stage.s3-eu-west-1.amazonaws.com/uploads/hero/image_card_background/doomfist/image_card_background.jpg
+
+two:
+  name: Genji
+  slug: genji
+  image_portrait: https://oversumo-stage.s3-eu-west-1.amazonaws.com/uploads/hero/image_portrait/genji/portrait.png
+  image_splash: https://oversumo-stage.s3-eu-west-1.amazonaws.com/uploads/hero/image_splash/genji/splash.jpg
+  image_card_background: https://oversumo-stage.s3-eu-west-1.amazonaws.com/uploads/hero/image_card_background/genji/image_card_background.jpg
