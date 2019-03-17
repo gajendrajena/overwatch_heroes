@@ -7,12 +7,8 @@ class App extends React.Component {
 
   constructor(props, context) {
     super(props);
+    this.state = { heroes: [], pagination: { per_page: 0, total_entries: 0, offset: 0, current_page: 1 } };
     this.triggerInfiniteScroll();
-    this.state = {
-      heroes: [],
-      name: '',
-      pagination: { per_page: 0, total_entries: 0, offset: 0, current_page: 1 }
-    };
   }
 
   triggerInfiniteScroll = ()=> {
@@ -27,7 +23,7 @@ class App extends React.Component {
           _this.fetchHeros({page: _this.state.pagination.current_page +1, append: true})
         }
       });
-    }, false )
+    }, false );
   }
 
   status(response) {
@@ -44,7 +40,7 @@ class App extends React.Component {
 
   fetchHeros = (params)=> {
     var _this = this;
-    var url = '/api/heros?per_page=10'
+    var url = '/api/heros?per_page=10';
     if(Object.keys(params) && Object.keys(params).length > 0 ){
       if(params.hasOwnProperty('page')){ url += '&page=' + params['page']; }
       if(params.hasOwnProperty('name')){ url += '&name=' + params['name']; }
@@ -77,7 +73,7 @@ class App extends React.Component {
 
   render () {
     var _this = this;
-    var pagination = this.state.pagination;
+
     return (
       <React.Fragment>
         <div className="row">
