@@ -1,84 +1,65 @@
-# README
+# Overwatch Heroes
+A list of overwatch heroes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technologies
+- Frontend
+`React` (16.8.4), `Twitter Bootstrap (4.3.1)`
 
-Things you may want to cover:
+- Backend
+`Ruby on Rails` ( Ruby:` 2.6.0`, Rails: `6.0.0.2.beta2` )
 
-* Ruby version
+## Pre requisite
+1. Ruby - `2.6.0` ( Choose `rvm` or `rbenv` )
 
-* System dependencies
+2. Postgresql - `10.7`
+`brew install postgresql`
+`brew services start postgresql`
 
-* Configuration
+## Setup
 
-* Database creation
+**1. Clone the repository**
+```
+git clone git@github.com:gajendrajena/overwatch_heroes.git
+```
 
-* Database initialization
+**2. Install Dependencies**
+```
+cd overwatch_heroes
+bundle install
+```
 
-* How to run the test suite
+**3. Create Database**
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rake db:create
+```
 
-* Deployment instructions
+**4. Setup seed data**
 
-* ...
+```
+rake db:setup
+```
 
+**5. Run server**
 
-rails g scaffold heroes type:string name:string slug:string image_portrait:string image_splash:string image_card_background:string
+```
+rails s
+```
 
+**6. To run testcases**
 
-Thank you once again for your application at Dojo Madness. As a next step in the application process, we would like to get a feeling for your skills and get a few more insights in why you want to work for us. Therefore, we invite you to our code challenge below and answer the two questions. Please send us a link to your code on Github and your answers to the questions within the next 7 days.
-
-
-Why would you want to work with us?
-What are your thoughts on our products?
-
-
-
-Fullstack code challenge
-
-Create a Single-Page Application that provides information about Overwatch heroes. The task should be implemented in 150 minutes using either React.js or Angular.js for the frontend and Ruby for the backend.
-
-
-The required data is stored at  https://s3.eu-central-1.amazonaws.com/dojomadness.com/code-challenge/heros
-
-
-Keep in mind that your application should **NOT** use the s3 file directly but should use a local database instead.
-
-
-----
-
-
-The application should support following features.
-
-
-1. Interface to display list of heroes
-
-2. Infinite scroll pagination
-
-3. Working deployment on https://heroku.com
+```
+rails test
+```
 
 
-----
+## Deployment
+
+Platform - `Heroku`
+
+This application is currently deployed at https://overwatchheros.herokuapp.com/
 
 
-Bonus points for:
+## Credits
 
-
-- client-server architecture
-
-- responsive design
-
-- data persistence in application database
-
-- filtering by hero name
-
-- tests
-
-- documentation
-
-- anything that will impress us ;)
-
-
-
-Create a free heroku.com account before starting the challenge
+Gajendra Jena
